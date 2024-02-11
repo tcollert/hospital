@@ -46,7 +46,10 @@ public abstract class Employee {
 
     @Override
     public String toString() {
-        String employeeDetails = "The patient's health for this employee is " + this.patientHealth;
+        String employeeDetails = "The patient's health for this employee is " + this.patientHealth
+                + "." + "  The current salary is $ " + this.salary + "." + "  The employee's name is "
+                + this.employeeName
+                + "." + "  The employee number is " + this.employeeNumber + ".";
 
         return employeeDetails;
     }

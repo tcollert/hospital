@@ -1,7 +1,8 @@
-public class Doctor extends Employee {
+public class Surgeon extends Employee {
     String specialtyArea;
+    boolean isOperating;
 
-    public Doctor(double salary, String employeeName, int employeeNumber, String specialtyArea) {
+    public Surgeon(double salary, String employeeName, int employeeNumber, String specialtyArea, boolean isOperating) {
         super(salary, employeeName, employeeNumber);
         this.specialtyArea = specialtyArea;
     }
@@ -14,13 +15,19 @@ public class Doctor extends Employee {
         this.specialtyArea = specialtyArea;
     }
 
+    public boolean getIsOperating() {
+        return this.isOperating;
+    }
+
+    public void setIsOperating(boolean isOperating) {
+        this.isOperating = isOperating;
+
+    }
+
     public void careForPatient() {
         int currentPatientHealth = this.getPatientHealth();
         int updatedPatientHealth = currentPatientHealth + 1;
         this.setPatientHealth(updatedPatientHealth);
-
-        // Shortened version: this.setPatientHealth(this.getPatientHealth() + 1);
-
     }
 
     @Override
